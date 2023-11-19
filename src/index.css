@@ -1,0 +1,226 @@
+
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: antiquewhite;
+  font-family:Georgia, 'Times New Roman', Times, serif;
+  padding: 10px;
+  background-size: 100% 100%;
+  
+}
+
+.header {
+
+
+  padding: 30px;
+  text-align: center;
+}
+
+  .header h1 {
+      font-size: 50px;
+      
+  }
+.row {
+ 
+  background-size: 100% 100%;
+  }
+
+
+.leftnav  {
+  float: left;
+  top:0;
+  width: 20%;
+  height: 100%;
+  overflow: hidden;
+  position: fixed;
+  
+}
+
+
+  .leftnav a {
+      float: top;
+      display: block;
+      font-size: large;
+      height: 75px;
+      color: black;
+      text-align: left;
+      padding-left: 20px;
+      text-decoration: none;
+  }
+
+    
+      .leftnav a:hover {
+          color: rgb(230, 91, 91);
+          font-size: 30px;
+      }
+
+
+.rightcolumn {
+  background-size: 100% 100%;
+  float: right;
+  width: 75%;
+  
+  padding-left: 20px;
+}
+.left1{
+  float: left;
+  width: 20%;
+}
+.img1{
+  float: top;
+  size: 20px 20px;
+}
+.right1{
+  float: right;
+  width: 80%;
+}
+
+.img {
+  width: 100%;
+  padding: 20px;
+}
+
+
+.card {
+  background-color: rgb(249, 243, 236);
+  padding: 20px;
+  margin-top: 20px;
+  width: 95%;
+  float:left;
+}
+.slide_contain{/*图片廊容器*/
+  position: relative;
+  width: 100%;
+  
+}
+.mySlides {display:none}
+.IMG{/*图片廊图片*/
+  width: 100%;
+  height: 400px;
+}
+.numbertext{
+  position: absolute;
+  top:0;
+  left: 0;
+}
+.text{/*图片廊文本*/
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translate(-50%,0);
+  color: rgb(2, 2, 40);
+}
+.pre, .next {/*图片廊前进后退*/
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translate(0,-50%);/*用top和transform来居中*/
+  color: white;
+  padding: 16px;
+  font-weight: bold;
+  font-size: 60px;
+  transition: 1s ease;
+  border-radius: 0 3px 3px 0;
+}
+.pre:hover, .next:hover {
+  background-color: rgba(88, 87, 87, 0.8);
+}
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+.dot {/*图片廊选择点*/
+  cursor:pointer;
+  height: 13px;
+  width: 13px;
+  background-color: #7fcdf4;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 1s ease;
+}
+.active, .dot:hover {
+  background-color: #f30c0c;
+}
+@keyframes fade {/*图片廊渐变动画*/
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#upload ,#BUTTON{
+  border-radius:25px;
+  background-color:antiquewhite;
+  font-size: 20px;
+  float: right;
+  padding: 3px;
+  cursor: pointer;
+}
+#displaycontent p{
+  background-color: #fdfefe;
+  border: 30px;
+  box-shadow: antiquewhite;
+  padding: 30px;
+}
+#displaycontent button{
+  padding: 15px;
+  font-size:40px;
+  display:block;
+  background-image:url(img/pencil.png);
+  background-size:200px 100%;
+  background-repeat: no-repeat;
+  border-radius:50px;
+  clear: both;
+  margin-top: 100px;
+  margin-bottom: 20px;
+}
+#displaycontent button:hover{
+  cursor:pointer;
+}
+#displaycomment *{
+  float: left;
+  clear: both;
+}
+#displaycomment p{
+  background-color: #fdfefe;
+}
+#displaycomment button{
+  padding: 5px;
+  background-color: aliceblue;
+  margin-top: 40px;
+}
+
+.footer {
+  padding: 20px;
+  text-align: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  margin-top: 20px;
+}
+
+
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {
+      width: 100%;
+      padding: 0;
+  }
+}
+
+
+@media screen and (max-width: 400px) {
+  .topnav a {
+      float: none;
+      width: 100%;
+  }
+}

@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="src/index.css">
+  <link rel="icon" href="src/img/shushu.png" />
+  <script  src="src/main.js"></script>
+  <script src="src/Cookies.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A self introduction webpage</title>
+</head>
+<body id="body" onload="currentSlide(slideIndex);autochange();displaycontent();displaycomment();scrollback();" onscroll="setCookie('scroll',document.documentElement.scrollTop,1);">
+ 
+  <div class="header" id="header">
+    <h1>欢迎来到我的介绍页</h1>
+  </div>
+  <div class="row">
+    <div class="leftnav">
+      <a style="background-image: url(src/img/orange\ 3.jpeg);background-size: 100% 70%;background-repeat: no-repeat;"> </a>
+      <a href="#header" style="font-weight: 600;font-size: 30px;">顶部</a>
+      <a href="#page1">个人介绍</a>
+      <a href="#page2">我的图片墙</a>
+      <a href="#page3">我的学习记录</a>
+      <a href="#page4">评论区</a>
+      <a href="#page5">联系我</a>
+    </div>
+    <div class="rightcolumn">
+      <div id="page1" class="card">
+        <h2>个人介绍</h2>
+        <div>
+          <div class="left1">
+           <img class="img1" src="src/img/shushu.png" width="150px" height="120px"></img>
+           <h style="display: block;">基本信息</h>
+           <p>姓名：罗海鑫<br>
+           性别：男<br>
+           班级：0911<br>
+           年级：2022
+           </p>
+          </div>
+          <div class="right1"><p>你好，我的名字是罗海鑫，目前是软件学院网安方向的大二生，我在学习上认真，以尽力为原则，为人上随和，不拘小节，我希望能够成为焦糖的一份子，加入到这个大家庭中。
+            专业兴趣：前端web，网安，<br>
+            业余爱好：csgo，方舟，MC，番剧，喵斯<br>
+            未来方向：继续深入学习前端，辅以后端的学习，网安作为偶尔的消遣
+          </p></div>
+        </div>
+      </div>
+      <div id="page2" class="card">
+        <script  src="src/Picture Gallery.js"></script>
+        <h2>我的图片墙</h2>
+        <div class="slide_contain" >
+         <div class="mySlides fade">
+          <div class="numbertext">1 / 3</div>
+           <img decoding="async" class="IMG" src="src/img/pool.png" >
+          <div class="text">湖泊</div>
+         </div>
+         <div class="mySlides fade">
+          <div class="numbertext">2 / 3</div>
+           <img decoding="async" class="IMG" src="src/img/mositima.png" >
+          <div class="text">小莫</div>
+         </div>
+         <div class="mySlides fade">
+          <div class="numbertext">3 / 3</div>
+           <img decoding="async" class="IMG" src="src/img/shahe.png" >
+          <div class="text">绿</div>
+         </div>
+         <a class="pre" onclick="plusSlides(-1)">❮</a>
+         <a class="next" onclick="plusSlides(1)">❯</a>
+        </div>
+        <br>
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span> 
+          <span class="dot" onclick="currentSlide(2)"></span> 
+          <span class="dot" onclick="currentSlide(3)"></span> 
+        </div>
+      </div>
+      <div id=page3 class="card">
+        <script  src="src/Learning Record.js"></script>
+        <button id=upload onclick="check()">上传学习记录</button>
+        <div id="hide" style="display: none;">
+          <form action="index.html">
+            标题：<input type="text" name="Title1" id="Title">
+            内容：<input type="text" name="Content1" id="Content">
+            <button onclick="upload()">上传</button>
+          </form>
+        </div>
+        <div style="white-space: pre-line;">
+          <h1>我的学习记录</h1>
+          <p id="displaycontent"></p>
+          <button id="BUTTON" onclick="Clear()">清除所有学习记录</button>
+        </div>
+      </div>
+      <div id="page4" class="card" style="white-space: pre-line;">
+        <script  src="src/Comment area.js"></script>
+        <h1>评论区</h1>
+        <button id="BUTTON" style="float:left;" onclick="commentmessage()">我要评论</button><br><br><br>
+        <div id="hide+" style="display:none;clear:both;">
+          <div>
+            年级：<input type="text" name="grade1" id="grade" value="20XX"><br>
+            性别：<input type="text" name="sex1" id="sex" value="男/女"><br>
+            年龄：<input type="text" name="age1" id="age" value="XX"><br>
+            评论：<input type="text" name="comment1" id="comment" value="评论"><br>
+            <p id="incorrectMessage"></p>
+            <button onclick="release()">发布评论</button>
+          </div>
+        </div>
+        <button id="BUTTON" style="float: left;" onclick="searchtext()">搜索评论</button><br><br><br>
+        <div id="hide++" style="display: none;">
+          <div>
+            年级：<input type="text" name="grade2" id="grade+" value="20XX 或留空"><br>
+            性别：<input type="text" name="sex2" id="sex+" value="男/女 或留空"><br>
+            年龄：<input type="text" name="age2" id="age+" value="XX 或留空"><br>
+            <p id="promptMessage"></p>
+            <button onclick="Search()">搜索评论</button>
+          </div>
+        </div>
+        <p id="displaycomment"></p>
+      </div>
+    </div>
+  </div>
+  
+  <div id="page5" class="footer">
+    <p>我的邮箱：1753779141@qq.com</p>
+    <a href="https://github.com/tabby-02">我的github地址</a>
+  </div>
+  
+
+</body>
+</html>
